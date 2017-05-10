@@ -16,17 +16,17 @@
     
     
 
-    <meta name="description" content="#更新大纲# 英雄，技能，动作的框架已大体完成，可以通过继承action的方法来写出新的技能，初步探索粒子系统 #基础概念# ##动作BaseAction## -动画播放时间，动画播放完所需时间-进入cd时间点，cd时间-动作执行时间-技能释放界面图标-技能拥有者-上次执行的技能信息，包括释放单位位置，目标释放点，目标释放单位。 是一个英雄(单位)可以使用的最基础的，可以派生出其他动作，技能，等的">
+    <meta name="description" content="更新大纲英雄，技能，动作的框架已大体完成，可以通过继承action的方法来写出新的技能，初步探索粒子系统 基础概念动作BaseAction 动画播放时间，动画播放完所需时间 进入cd时间点，cd时间 动作执行时间 技能释放界面图标 技能拥有者 上次执行的技能信息，包括释放单位位置，目标释放点，目标释放单位。  是一个英雄(单位)可以使用的最基础的，可以派生出其他动作，技能，等的基础类。Action">
 <meta name="keywords" content="游戏,开发,更新日志">
 <meta property="og:type" content="article">
 <meta property="og:title" content="更新日志v0.0.005 | Isak's Blog">
 <meta property="og:url" content="http://waveland.cn/2017/04/17/v0.0.005/index.html">
 <meta property="og:site_name" content="Isak's Blog">
-<meta property="og:description" content="#更新大纲# 英雄，技能，动作的框架已大体完成，可以通过继承action的方法来写出新的技能，初步探索粒子系统 #基础概念# ##动作BaseAction## -动画播放时间，动画播放完所需时间-进入cd时间点，cd时间-动作执行时间-技能释放界面图标-技能拥有者-上次执行的技能信息，包括释放单位位置，目标释放点，目标释放单位。 是一个英雄(单位)可以使用的最基础的，可以派生出其他动作，技能，等的">
-<meta property="og:updated_time" content="2017-05-10T05:56:49.085Z">
+<meta property="og:description" content="更新大纲英雄，技能，动作的框架已大体完成，可以通过继承action的方法来写出新的技能，初步探索粒子系统 基础概念动作BaseAction 动画播放时间，动画播放完所需时间 进入cd时间点，cd时间 动作执行时间 技能释放界面图标 技能拥有者 上次执行的技能信息，包括释放单位位置，目标释放点，目标释放单位。  是一个英雄(单位)可以使用的最基础的，可以派生出其他动作，技能，等的基础类。Action">
+<meta property="og:updated_time" content="2017-05-10T06:07:50.803Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="更新日志v0.0.005 | Isak's Blog">
-<meta name="twitter:description" content="#更新大纲# 英雄，技能，动作的框架已大体完成，可以通过继承action的方法来写出新的技能，初步探索粒子系统 #基础概念# ##动作BaseAction## -动画播放时间，动画播放完所需时间-进入cd时间点，cd时间-动作执行时间-技能释放界面图标-技能拥有者-上次执行的技能信息，包括释放单位位置，目标释放点，目标释放单位。 是一个英雄(单位)可以使用的最基础的，可以派生出其他动作，技能，等的">
+<meta name="twitter:description" content="更新大纲英雄，技能，动作的框架已大体完成，可以通过继承action的方法来写出新的技能，初步探索粒子系统 基础概念动作BaseAction 动画播放时间，动画播放完所需时间 进入cd时间点，cd时间 动作执行时间 技能释放界面图标 技能拥有者 上次执行的技能信息，包括释放单位位置，目标释放点，目标释放单位。  是一个英雄(单位)可以使用的最基础的，可以派生出其他动作，技能，等的基础类。Action">
     
     
     
@@ -186,16 +186,28 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <p>#更新大纲#</p>
-<p>英雄，技能，动作的框架已大体完成，可以通过继承action的方法来写出新的技能，初步探索粒子系统</p>
-<p>#基础概念#</p>
-<p>##动作BaseAction##</p>
-<p>-动画播放时间，动画播放完所需时间<br>-进入cd时间点，cd时间<br>-动作执行时间<br>-技能释放界面图标<br>-技能拥有者<br>-上次执行的技能信息，包括释放单位位置，目标释放点，目标释放单位。</p>
+    <h1 id="更新大纲"><a href="#更新大纲" class="headerlink" title="更新大纲"></a>更新大纲</h1><p>英雄，技能，动作的框架已大体完成，可以通过继承action的方法来写出新的技能，初步探索粒子系统</p>
+<h1 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h1><h2 id="动作BaseAction"><a href="#动作BaseAction" class="headerlink" title="动作BaseAction"></a>动作BaseAction</h2><ul>
+<li>动画播放时间，动画播放完所需时间</li>
+<li>进入cd时间点，cd时间</li>
+<li>动作执行时间</li>
+<li>技能释放界面图标</li>
+<li>技能拥有者</li>
+<li>上次执行的技能信息，包括释放单位位置，目标释放点，目标释放单位。</li>
+</ul>
 <p>是一个英雄(单位)可以使用的最基础的，可以派生出其他动作，技能，等的基础类。<br>Action控制着一个动作最基础的功能，比如冷却，开始释放，执行，进入冷却，冷却完毕，以及动作图标的显示与管理。<br>同时拥有一个记录释放info的类。</p>
-<p>##SlamAction##<br>瞬间执行的动作，动作将在执行后瞬间生效，执行前可被打断，可选择是在执行前进入cd，还是执行后进入cd。</p>
-<p>##LastAction##<br>持续释放的动作，执行后持续生效，如果被打断则失去效果。</p>
-<p>#更新内容#<br>-动作类新增拥有者<br>-新增动作释放人物动画效果<br>-新增动作图标(技能图标)，下方<br>-人物移动自然化，面向角度改变自然化<br>-</p>
-<p>#已知Bug#<br>-网络多人的动作释放后会陷入僵直状态<br>-网络多人情况下无法正确创建弹幕</p>
+<h2 id="SlamAction"><a href="#SlamAction" class="headerlink" title="SlamAction"></a>SlamAction</h2><p>瞬间执行的动作，动作将在执行后瞬间生效，执行前可被打断，可选择是在执行前进入cd，还是执行后进入cd。</p>
+<h2 id="LastAction"><a href="#LastAction" class="headerlink" title="LastAction"></a>LastAction</h2><p>持续释放的动作，执行后持续生效，如果被打断则失去效果。</p>
+<h1 id="更新内容"><a href="#更新内容" class="headerlink" title="更新内容"></a>更新内容</h1><ul>
+<li>动作类新增拥有者</li>
+<li>新增动作释放人物动画效果</li>
+<li>新增动作图标(技能图标)，下方</li>
+<li>人物移动自然化，面向角度改变自然化</li>
+</ul>
+<h1 id="已知Bug"><a href="#已知Bug" class="headerlink" title="已知Bug"></a>已知Bug</h1><ul>
+<li>网络多人的动作释放后会陷入僵直状态</li>
+<li>网络多人情况下无法正确创建弹幕</li>
+</ul>
 
   </section>
 
