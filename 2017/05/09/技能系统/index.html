@@ -7,7 +7,7 @@
     
 
     <title>
-      更新日志v0.0.003 | Isak&#39;s Blog 
+      游戏技能系统 | Isak&#39;s Blog 
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,17 +16,17 @@
     
     
 
-    <meta name="description" content="一些想法游戏内所有物体分类##   Ground 地表 （地面） Unit 单位 （包含英雄，以及不同单位） Effect 特效 （ HUD  Item 物品 （可用于拾取） FunctionalObject 功能性物体（如树木，矿物） Ornament    装饰物（不会用于检测） UI   更新 操作方式改为鼠标右键控制移动，左键释放技能 游戏内部右边通知栏 新的自制UI组件 更改玩家操作机制">
-<meta name="keywords" content="游戏,开发,设计">
+    <meta name="description" content="#技能系统# 一点关于网络同步的技能系统的小研究 #基础概念# ##技能管理类##负责管理一个角色所拥有的所有技能，包括释放（包含判断），以及每个技能的更新（含有冷却）。 ##技能基类##基类只拥有基本的属性和基本功能（释放，结束释放，冷却，判断能否释放）子类可以选择重载这些方法，其中Visual和Effect方法必须重载 ##服务器执行##当玩家按下键位时候，会本地执行一次判断，如果可以释放，则">
+<meta name="keywords" content="游戏,开发,更新">
 <meta property="og:type" content="article">
-<meta property="og:title" content="更新日志v0.0.003 | Isak's Blog">
-<meta property="og:url" content="http://waveland.cn/2017/02/15/game_design_001/index.html">
+<meta property="og:title" content="游戏技能系统 | Isak's Blog">
+<meta property="og:url" content="http://waveland.cn/2017/05/09/技能系统/index.html">
 <meta property="og:site_name" content="Isak's Blog">
-<meta property="og:description" content="一些想法游戏内所有物体分类##   Ground 地表 （地面） Unit 单位 （包含英雄，以及不同单位） Effect 特效 （ HUD  Item 物品 （可用于拾取） FunctionalObject 功能性物体（如树木，矿物） Ornament    装饰物（不会用于检测） UI   更新 操作方式改为鼠标右键控制移动，左键释放技能 游戏内部右边通知栏 新的自制UI组件 更改玩家操作机制">
-<meta property="og:updated_time" content="2017-04-10T16:28:40.242Z">
+<meta property="og:description" content="#技能系统# 一点关于网络同步的技能系统的小研究 #基础概念# ##技能管理类##负责管理一个角色所拥有的所有技能，包括释放（包含判断），以及每个技能的更新（含有冷却）。 ##技能基类##基类只拥有基本的属性和基本功能（释放，结束释放，冷却，判断能否释放）子类可以选择重载这些方法，其中Visual和Effect方法必须重载 ##服务器执行##当玩家按下键位时候，会本地执行一次判断，如果可以释放，则">
+<meta property="og:updated_time" content="2017-05-10T06:05:15.968Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="更新日志v0.0.003 | Isak's Blog">
-<meta name="twitter:description" content="一些想法游戏内所有物体分类##   Ground 地表 （地面） Unit 单位 （包含英雄，以及不同单位） Effect 特效 （ HUD  Item 物品 （可用于拾取） FunctionalObject 功能性物体（如树木，矿物） Ornament    装饰物（不会用于检测） UI   更新 操作方式改为鼠标右键控制移动，左键释放技能 游戏内部右边通知栏 新的自制UI组件 更改玩家操作机制">
+<meta name="twitter:title" content="游戏技能系统 | Isak's Blog">
+<meta name="twitter:description" content="#技能系统# 一点关于网络同步的技能系统的小研究 #基础概念# ##技能管理类##负责管理一个角色所拥有的所有技能，包括释放（包含判断），以及每个技能的更新（含有冷却）。 ##技能基类##基类只拥有基本的属性和基本功能（释放，结束释放，冷却，判断能否释放）子类可以选择重载这些方法，其中Visual和Effect方法必须重载 ##服务器执行##当玩家按下键位时候，会本地执行一次判断，如果可以释放，则">
     
     
     
@@ -155,12 +155,12 @@ classes that you can use:
 
   <header class="post-header">
     
-    <h1 class="post-title">更新日志v0.0.003</h1>
+    <h1 class="post-title">游戏技能系统</h1>
 
     
 
     <div class="post-meta">
-      <time datetime="2017-02-15" class="post-meta__date date">2017-02-15</time> 
+      <time datetime="2017-05-09" class="post-meta__date date">2017-05-09</time> 
 
       <span class="post-meta__tags tags">
 
@@ -174,7 +174,7 @@ classes that you can use:
           
              &#8226; 标签:
             <font class="tags">
-              <a class="tags-link" href="/tags/开发/">开发</a>, <a class="tags-link" href="/tags/游戏/">游戏</a>, <a class="tags-link" href="/tags/设计/">设计</a>
+              <a class="tags-link" href="/tags/开发/">开发</a>, <a class="tags-link" href="/tags/更新/">更新</a>, <a class="tags-link" href="/tags/游戏/">游戏</a>
             </font>
           
 
@@ -186,31 +186,12 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <h2 id="一些想法"><a href="#一些想法" class="headerlink" title="一些想法"></a>一些想法</h2><p>游戏内所有物体分类##</p>
-<hr>
-<ul>
-<li>Ground 地表 （地面）</li>
-<li>Unit 单位 （包含英雄，以及不同单位）</li>
-<li>Effect 特效 （</li>
-<li>HUD </li>
-<li>Item 物品 （可用于拾取）</li>
-<li>FunctionalObject 功能性物体（如树木，矿物）</li>
-<li>Ornament    装饰物（不会用于检测）</li>
-<li>UI</li>
-</ul>
-<hr>
-<h2 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h2><ol>
-<li>操作方式改为鼠标右键控制移动，左键释放技能</li>
-<li>游戏内部右边通知栏</li>
-<li>新的自制UI组件</li>
-<li>更改玩家操作机制，现已支持多人移动</li>
-<li>支持IP建立房间，以及IP加入房间</li>
-<li>主界面风格调整（守望先锋过于现代化）</li>
-</ol>
-<h2 id="Bug"><a href="#Bug" class="headerlink" title="Bug"></a>Bug</h2><ol>
-<li>多人无法正常播放动作</li>
-<li>没有美工= =</li>
-</ol>
+    <p>#技能系统#</p>
+<p>一点关于网络同步的技能系统的小研究</p>
+<p>#基础概念#</p>
+<p>##技能管理类##<br>负责管理一个角色所拥有的所有技能，包括释放（包含判断），以及每个技能的更新（含有冷却）。</p>
+<p>##技能基类##<br>基类只拥有基本的属性和基本功能（释放，结束释放，冷却，判断能否释放）<br>子类可以选择重载这些方法，其中Visual和Effect方法必须重载</p>
+<p>##服务器执行##<br>当玩家按下键位时候，会本地执行一次判断，如果可以释放，则进入释放准备阶段，即选择目标阶段，此时是本地准备阶段，当选择完目标后，将目标信息封装在技能释放信息结构体中，然后发送给服务器，执行该功能，服务器会使用远程调用，调用所有的客户端的单位释放这个技能，会把释放信息传输给每个客户端。<br>客户端和服务端维护一个共同的单位列表，以及每个单位的技能列表。</p>
 
   </section>
 
