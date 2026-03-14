@@ -1,0 +1,56 @@
+# Site settings
+title: IsakWong
+description: Game & Engine Developer | 游戏与引擎开发者，个人作品集与技术博客
+url: "https://isakwong.github.io"
+baseurl: ""
+author:
+  name: IsakWong
+  email: ""
+  github: IsakWong
+  role: Game & Engine Developer
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"

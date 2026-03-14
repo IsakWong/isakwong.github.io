@@ -1,0 +1,207 @@
+// Post list
+.post-list {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid $color-border;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    &:last-child { border-bottom: none; }
+  }
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: $color-text-light;
+  white-space: nowrap;
+  font-family: $font-mono;
+}
+
+// Post
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-title {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.post-meta {
+  color: $color-text-light;
+  font-size: 0.9rem;
+}
+
+.post-content {
+  h2 { margin-top: 2em; }
+  h3 { margin-top: 1.5em; }
+}
+
+// Page
+.page-title {
+  margin-top: 0;
+}
+
+// Tags
+.tag {
+  display: inline-block;
+  background: $color-code-bg;
+  color: $color-text-light;
+  font-size: 0.8rem;
+  padding: 0.1em 0.5em;
+  border-radius: 3px;
+  margin-right: 0.3em;
+}
+
+// Home hero
+.hero {
+  padding: 3rem 0 1.5rem;
+  h1 {
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.02em;
+  }
+  .hero-role {
+    font-size: 1.2rem;
+    color: $color-primary;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 1.05rem;
+    color: $color-text-light;
+  }
+}
+
+// Project grid
+.featured-projects,
+.post-list-section {
+  margin-top: 2.5rem;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  display: block;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  overflow: hidden;
+  color: $color-text;
+  transition: box-shadow 0.2s, transform 0.2s;
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: $color-text;
+  }
+}
+
+.project-cover {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-color: $color-code-bg;
+}
+
+.project-card-body {
+  padding: 1rem 1.25rem;
+  h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.15rem;
+  }
+  p {
+    color: $color-text-light;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.view-all {
+  margin-top: 1rem;
+  a {
+    font-weight: 500;
+  }
+}
+
+// Project detail page
+.project-detail {
+  .project-header {
+    margin-bottom: 2rem;
+  }
+  .project-desc {
+    font-size: 1.1rem;
+    color: $color-text-light;
+  }
+  .project-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+.project-hero-img {
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: 0.4em 1em;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: $color-primary;
+  color: #fff;
+  &:hover {
+    background: $color-primary-dark;
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid $color-primary;
+  color: $color-primary;
+  &:hover {
+    background: $color-primary;
+    color: #fff;
+  }
+}
+
+// Responsive
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
