@@ -5,8 +5,8 @@ title: Home
 
 <div class="hero">
   <h1>IsakWong</h1>
-  <p class="hero-role">Game & Engine Developer</p>
-  <p>专注游戏开发与引擎技术，热衷于图形渲染、物理模拟与工具链开发。</p>
+  <p class="hero-role">引擎工程师 / Game & Engine Developer</p>
+  <p>目前在杭州网易互娱，持续做小游戏、游戏框架与引擎能力建设。</p>
 </div>
 
 <section class="featured-projects">
